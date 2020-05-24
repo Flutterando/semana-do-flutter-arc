@@ -1,3 +1,5 @@
+import 'package:arch/app/repositories/auth_repository.dart';
+import 'package:arch/app/services/client_http_service.dart';
 import 'package:arch/app/services/shared_local_storage_service.dart';
 import 'package:arch/app/viewmodels/change_theme_viewmodel.dart';
 import 'package:flutter/foundation.dart';
@@ -9,6 +11,8 @@ class AppController {
   AppController._() {
     changeThemeViewModel.init();
   }
+
+  final AuthRepository authRepository = AuthRepository(ClientHttp());
 
   final ChangeThemeViewModel changeThemeViewModel =
       ChangeThemeViewModel(storage: SharedLocalStorageService());

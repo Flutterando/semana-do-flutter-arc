@@ -1,4 +1,5 @@
 import 'package:arch/app/pages/home/home_page.dart';
+import 'package:arch/app/pages/login/login_page.dart';
 import 'package:flutter/material.dart';
 
 import 'app_controller.dart';
@@ -16,7 +17,11 @@ class AppWidget extends StatelessWidget {
             visualDensity: VisualDensity.adaptivePlatformDensity,
             brightness: isDart ? Brightness.dark : Brightness.light,
           ),
-          home: HomePage(),
+          initialRoute: "/",
+          routes: {
+            "/": (_) => LoginPage(),
+            "/home": (_) => HomePage(),
+          },
         );
       },
     );
