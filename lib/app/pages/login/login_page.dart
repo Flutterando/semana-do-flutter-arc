@@ -22,7 +22,6 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
-              onChanged: (value) => controller.authModel.email = value,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: "email",
@@ -31,7 +30,6 @@ class _LoginPageState extends State<LoginPage> {
             ),
             SizedBox(height: 10),
             TextField(
-              onChanged: (value) => controller.authModel.password = value,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: "password",
@@ -42,8 +40,7 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 30),
             RaisedButton(
               onPressed: () {
-                print(controller.authModel);
-                // Navigator.of(context).pushReplacementNamed('/home');
+                Navigator.of(context).pushReplacementNamed('/home');
               },
               child: Text('Login'),
             ),
