@@ -1,7 +1,15 @@
-import 'package:dio/native_imp.dart';
+import 'package:arch/app/interfaces/client_http_interface.dart';
+import 'package:dio/dio.dart';
 
-class ClientHttp extends DioForNative {
-  ClientHttp() {
-    options.baseUrl = "https://5ecafaf138df960016511b4c.mockapi.io/api/v1";
+class ClientHttpService implements IClientHttp {
+  final Dio dio = Dio();
+
+  @override
+  void addToken(String token) {}
+
+  @override
+  Future get(String url) async {
+    var response = await dio.get(url);
+    return response.data;
   }
 }

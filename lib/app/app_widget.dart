@@ -17,11 +17,7 @@ class AppWidget extends StatelessWidget {
             visualDensity: VisualDensity.adaptivePlatformDensity,
             brightness: isDart ? Brightness.dark : Brightness.light,
           ),
-          initialRoute: "/",
-          routes: {
-            "/": (_) => LoginPage(),
-            "/home": (_) => HomePage(),
-          },
+          home: HomePage(),
         );
       },
     );
