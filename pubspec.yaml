@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  flutter_modular: ^1.2.5+1
   dio: ^3.0.9
   shared_preferences: ^0.5.7+3
   flutter:
