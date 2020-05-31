@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 import 'login_controller.dart';
 
@@ -40,7 +41,8 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 30),
             RaisedButton(
               onPressed: () {
-                Navigator.of(context).pushReplacementNamed('/home');
+                //   Navigator.of(context).pushReplacementNamed('/home');
+                Modular.to.pushReplacementNamed('/home');
               },
               child: Text('Login'),
             ),

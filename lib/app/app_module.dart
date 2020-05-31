@@ -1,4 +1,6 @@
 import 'package:arch/app/pages/home/home_controller.dart';
+import 'package:arch/app/pages/home/home_page.dart';
+import 'package:arch/app/pages/login/login_page.dart';
 import 'package:arch/app/repositories/apiadvisor_repository.dart';
 import 'package:arch/app/repositories/apiadvisor_repository_interface.dart';
 import 'package:arch/app/services/client_http_service.dart';
@@ -31,5 +33,8 @@ class AppModule extends MainModule {
   Widget get bootstrap => AppWidget();
 
   @override
-  List<Router> get routers => null;
+  List<Router> get routers => [
+        Router('/', child: (context, args) => LoginPage()),
+        Router('/home', child: (context, args) => HomePage())
+      ];
 }
