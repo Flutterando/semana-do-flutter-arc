@@ -22,8 +22,12 @@ environment:
 
 dependencies:
   flutter_modular: ^1.2.5+1
-  dio: ^3.0.9
-  shared_preferences: ^0.5.7+3
+  core_module:
+    path: modules/core_module
+  login_module:
+    path: modules/login_module
+  home_module:
+    path: modules/home_module
   flutter:
     sdk: flutter
 
